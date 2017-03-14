@@ -8,8 +8,5 @@ RUN apt-get update && \
 RUN pip install shadowsocks==2.8.2
 
 
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
-
 # Configure container to run as an executable
 ENTRYPOINT ["/usr/bin/ssserver"]
